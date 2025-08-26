@@ -97,7 +97,7 @@ date: "{post_date}"
             image_response.raise_for_status()
 
             # Update the post with the image URL
-            image_path = f"/{image_filename}"
+            image_path = f"{REPO_NAME}/images/{image_filename}"
             updated_content = f"{markdown_content}\n![Image]({image_path})\n"
             update_data = {
                 "message": f"Update post with image: {title}",
