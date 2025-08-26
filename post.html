@@ -1,0 +1,21 @@
+<form id="postForm">
+  <input type="text" name="title" placeholder="Title"><br>
+  <textarea name="content" placeholder="Write your post..."></textarea><br>
+  <input type="file" name="image"><br>
+  <button type="submit">Publish</button>
+</form>
+
+<script>
+document.getElementById("postForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  await fetch("https://procesblog.onrender.com/newpost/", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => alert(data.message))
+  .catch(err => alert("Error: " + err));
+});
+</script>
