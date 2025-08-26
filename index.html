@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Proces Blog</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+    h1 { text-align: center; }
+    .post { border-bottom: 1px solid #ddd; padding: 20px 0; }
+    .post h2 { margin-top: 0; }
+    .date { color: #666; font-size: 0.9em; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <h1>Proces Blog</h1>
+  <div id="posts">Loading posts...</div>
+
+  <script>
+  async function loadPosts() {
+    try {
+      const response = await fetch("https://api.github.com/repos/ren3mh/ProcesBlog/contents/_posts");
+      const files = await response.json();
+
+      const postsContainer = document.getElementById("posts");
+      postsContainer.innerHTML = "";
+
+      // Sort files newest first
+      const sorted = files.filter(f => f.name.endsWith(".md"))
+                          .sort((a, b) => b.name.localeCompare(a.name));
+
+      for (const file of sorted) {
+        const rawResponse = await fetch(file.download_url);
+        const text = await rawResponse.text();
+
+        // Extract title and date from frontmatter
+        const titleMatch = text.match(/title:\s*"(.*)"/);
+        const dateMatch = text.match(/date:\s*"(.*)"/);
+
+        const title = titleMatch ? titleMatch[1] : file.name;
+        const date = dateMatch ? dateMatch[1] : "";
+
+        // Remove the YAML frontmatter (--- blocks)
+        const content = text.replace(/---[\s\S]*?---/, "").trim();
+
+        // Convert markdown → HTML
+        const htmlContent = marked.parse(content);
+
+        // Render post
+        const div = document.createElement("div");
+        div.className = "post";
+        div.innerHTML = `<h2>${title}</h2><p class="date">${date}</p>${htmlContent}`;
+        postsContainer.appendChild(div);
+      }
+    } catch (err) {
+      document.getElementById("posts").innerHTML = "Error loading posts 😢";
+      console.error(err);
+    }
+  }
+
+  loadPosts();
+  </script>
+</body>
+</html>
