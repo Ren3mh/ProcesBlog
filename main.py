@@ -6,6 +6,8 @@ from fastapi import FastAPI, UploadFile, Form, HTTPException
 from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
 
+from fastapi.middleware.cors import CORSMiddleware
+
 
 #To run the FastAPI launch it with Uvicorn:
 #   uvicorn main:app --reload  
@@ -29,6 +31,19 @@ REPO_NAME = os.getenv("REPO_NAME")    # Your GitHub Pages repo name
 BRANCH = "main"  # Or "master" if using the old default
 
 app = FastAPI()
+
+# Allow GitHub Pages domain to call this API
+origins = [
+    "https://ren3mh.github.io",  # your GitHub Pages site
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,   # or ["*"] for testing (not recommended long-term)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
