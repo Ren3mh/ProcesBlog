@@ -106,7 +106,7 @@ date: "{post_date}"
             }
             requests.put(create_file_url, headers=headers, json=update_data)
 
-        return JSONResponse(content={"message": "Post created successfully!"})
+        return JSONResponse(content={"message": "Indlæget blev lavet fint"})
 
     except requests.exceptions.RequestException as e:
         raise HTTPException(status_code=500, detail=f"GitHub API error: {e}")
