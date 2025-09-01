@@ -20,3 +20,5 @@ Bruger programmer til at komme frem til konklusioner til forretningsbeslutninger
 matematik og statistik
 
 Business Intelligence: Forstå hvad der er vigtigt for virksomheden 
+
+![Image](images/2025-09-01-roadmap.png)
