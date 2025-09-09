@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Matrix</title>
+    <style>
+        body {
+            background-color: #FFD1DC; /* Light pink background color */
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .book {
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: white;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .book-info {
+            width: 100%;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Renés PorteFølge</h1>
+	<a href="./index.html">Gå til Renés Blog</a>
+	
+    <div class="book-grid">
+        <!-- Book 1 -->
+        <div class="book">
+            <img src="covers/Ondskaben.jpg" alt="Ondskaben">
+            <div class="book-info">
+                <h3>Min første "algoritme"</h3>
+                <p></p>
+            </div>
+        </div>
+        <!-- Book 2 -->
+        <div class="book">
+            <img src="covers/MeterISekundet.jpg" alt="Meter i sekundet">
+            <div class="book-info">
+                <h3>Booking, Blazor og SQL</h3>
+                <p>Uddeling af rescourver</p>
+            </div>
+        </div>
+        <!-- Book 3 -->
+        <div class="book">
+            <img src="covers/711.png" alt="7/11">
+            <div class="book-info">
+                <h3>Rejseplatform</h3>
+                <p>Visning af Cards</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
