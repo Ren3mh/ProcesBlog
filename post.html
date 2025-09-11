@@ -1,7 +1,50 @@
 <form id="postForm">
-  <input type="text" name="title" placeholder="Title"><br>
-  <textarea name="content" placeholder="Write your post..."></textarea><br>
-  <input type="file" name="image"><br>
+  <h3>Lav nyt porteføljeopslag</h3>
+
+  <!-- Titel -->
+  <label for="title">Titel / Emne</label><br>
+  <input type="text" name="title" id="title" placeholder="Fx: Refleksion over gruppearbejde i uge 37"><br><br>
+
+  <!-- Kontekst -->
+  <label for="context">Kontekst</label><br>
+  <textarea name="context" id="context" rows="3">- Hvad handlede opgaven/projektet om?
+- Hvorfor er det relevant for læringsmålene?</textarea><br><br>
+
+  <!-- Mål -->
+  <label for="goal">Mål</label><br>
+  <textarea name="goal" id="goal" rows="3">- Hvilket læringsmål arbejdede jeg med?
+- Hvad ville jeg gerne opnå?</textarea><br><br>
+
+  <!-- Handling / Erfaring -->
+  <label for="doing">Handling / Erfaring (Doing)</label><br>
+  <textarea name="doing" id="doing" rows="3">- Hvad gjorde jeg konkret (kode, design, research, samarbejde)?
+- Evt. billede, kodeeksempel eller screenshot.</textarea><br><br>
+
+  <!-- Refleksion -->
+  <label for="reflection">Refleksion (Reflecting)</label><br>
+  <textarea name="reflection" id="reflection" rows="3">- Hvad gik godt?
+- Hvad var udfordrende?
+- Hvad lærte jeg?</textarea><br><br>
+
+  <!-- Kobling til teori -->
+  <label for="thinking">Kobling til teori (Thinking)</label><br>
+  <textarea name="thinking" id="thinking" rows="3">- Hvordan hænger erfaringen sammen med teori, modeller eller metoder fra undervisningen?</textarea><br><br>
+
+  <!-- Næste skridt -->
+  <label for="planning">Næste skridt (Planning)</label><br>
+  <textarea name="planning" id="planning" rows="3">- Hvad vil jeg gøre anderledes næste gang?
+- Hvilke forbedringer planlægger jeg?</textarea><br><br>
+
+  <!-- Feedback -->
+  <label for="feedback">Feedback (hvis relevant)</label><br>
+  <textarea name="feedback" id="feedback" rows="3">- Hvilken feedback fik jeg (fra vejleder/guild/gruppe)?
+- Hvordan kan jeg bruge den?</textarea><br><br>
+
+  <!-- Billede upload -->
+  <label for="image">Tilføj billede</label><br>
+  <input type="file" name="image" id="image"><br><br>
+
+  <!-- Submit -->
   <button type="submit">Publish</button>
 </form>
 
