@@ -3,6 +3,8 @@ title: "udvikle en full-stack applikation"
 date: "2025-09-23"
 ---
 
+DETTE INDLÆG ER SKREVET MED AI BASERET PÅ MINE SAMTALER OG SPØRGSMÅL 
+
 ### Kontekst
 
 Projektet gik ud på at udvikle en full-stack applikation med et Blazor WebAssembly frontend og et .NET 9 Web API backend, der skulle deployes på en Hetzner VPS med PostgreSQL-database, Nginx som reverse proxy og automatisk CI/CD via GitHub Actions. Målet var at skabe en skalerbar, produktionsklar løsning med automatiseret deployment, sikkerhed (HTTPS) og databasehåndtering.
@@ -153,4 +155,5 @@ Hvilke forbedringer planlægger jeg?
 
 ### Feedback
 - Hvilken feedback fik jeg (fra vejleder/guild/gruppe)?
+
 - Hvordan kan jeg bruge den?
