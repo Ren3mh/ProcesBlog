@@ -49,6 +49,5 @@ Læringsmål	Primært fokus	Evt. støtteområder
 2. Dataanalyse og visualisering	Analyse & præsentation	Frontend / dashboard
 3. Dataetik og forretningsforståelse	Forretning & etik	Kommunikation / IT-sikkerhed
 
-Vil du have, at jeg hjælper dig formulere et af disse læringsmål som en færdig tekst til din portefølje, sådan som de skal stå i Kolbs læringscirkel-format (med refleksion, plan og handling)?
-Det kan fx være: “Sådan har jeg arbejdet med Læringsmål 2 i praksis i mit projekt.”
+
 
