@@ -1,12 +1,12 @@
 ---
-title: "Browser automatisering"
+title: "Læringsmål"
 date: "2025-11-19"
 ---
 
 **19-11 2025:**
 
 
-Læringsmål 1: Dataindsamling og forberedelse
+Læringsmål: Dataindsamling og forberedelse
 
 Jeg vil kunne arbejde selvstændigt med indsamling, strukturering og forberedelse af data til analyse.
 Viden
